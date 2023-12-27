@@ -1,0 +1,30 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Scheduler</title>
+</head>
+<body>
+    <h1>WhatsApp Scheduler</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <div>
+            {{ form.phone_number.label }}
+            {{ form.phone_number() }}
+        </div>
+        <div>
+            {{ form.message.label }}
+            {{ form.message() }}
+        </div>
+        <div>
+            {{ form.scheduled_time.label }}
+            {{ form.scheduled_time() }}
+        </div>
+        <div>
+            <button type="submit">Schedule Message</button>
+        </div>
+    </form>
+</body>
+</html>
